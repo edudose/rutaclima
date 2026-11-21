@@ -1,0 +1,41 @@
+RutaClima Trayectos: lluvia, temperatura, viento y riesgo de niebla en el trayecto (Paraguay). Versión de prueba.
+
+Esta carpeta es lo que sirve la página: index.html (la aplicación) y ciclo.json (el pronóstico del ciclo más nuevo).
+La arma un proceso automático; cada publicación reemplaza a la anterior.
+
+Es un pronóstico experimental y sin garantía. No reemplaza a los avisos oficiales ni al criterio de quien maneja.
+
+El programa de la página (el código de index.html) es de RutaClima, (c) 2026, con todos los derechos reservados: se
+puede usar la página, pero no copiar ni reutilizar su código sin permiso. Los datos de terceros conservan sus licencias,
+que se detallan abajo.
+
+Fuentes y licencias
+- Lluvia: ECMWF Open Data, ensamble del IFS (https://www.ecmwf.int/en/forecasts/datasets/open-data).
+  Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Cambios: recorte al país y ventanas de 3 h.
+- Riesgo de niebla: ECMWF Open Data, modelo determinístico del IFS (misma licencia), calibrado con partes de aeropuerto
+  (METAR) del archivo de Iowa Environmental Mesonet.
+- Temperatura y viento: WRF del Servicio Meteorológico Nacional de Argentina
+  (https://registry.opendata.aws/smn-ar-wrf-dataset). Licencia CC BY 2.5 AR
+  (https://creativecommons.org/licenses/by/2.5/ar/). Cambios: promedio a celdas de 0,1 grados y un paso cada 3 h.
+- Caminos y localidades: (c) colaboradores de OpenStreetMap (https://www.openstreetmap.org/copyright).
+  La red vial y la lista de lugares que van dentro de index.html son un extracto de OpenStreetMap (la red vial principal
+  del Paraguay, los caminos sin clasificar y, en el Chaco, las huellas, con la geometría simplificada, y los lugares con
+  nombre; datos del 11 de noviembre de 2026) y quedan bajo la Open Database License 1.0
+  (https://opendatacommons.org/licenses/odbl/1-0/). Están en index.html en formato legible por máquina.
+  Las huellas pueden ser caminos privados o con tranquera: OpenStreetMap no siempre lo dice.
+- Superficie de los caminos, donde OpenStreetMap no la dice: Instituto Nacional de Estadística del Paraguay, Cartografía
+  Censal 2022 (archivos de octubre de 2024; https://www.ine.gov.py/microdatos/cartografia-digital-2022.php), bajo la
+  Licencia de Uso de la Información y los Datos Abiertos Públicos (Decreto 4064, Ley 5282/2014;
+  https://www.ine.gov.py/microdatos/license.php). Esta página no es oficial ni está patrocinada por el Estado paraguayo.
+- Clausuras (clausuras.json): Ministerio de Obras Públicas y Comunicaciones del Paraguay, Departamento de
+  Radiocomunicaciones, informe diario de puentes y rutas clausuradas (https://mopc.gov.py/servicios/estado-de-las-rutas/).
+  Se copia tal como lo publica el MOPC, que no declara licencia; es información pública. Esta página no es oficial.
+- Riesgo de clausura (riesgo.json): estimación propia y experimental de RutaClima, sólo para los caminos de tierra del
+  Chaco que el informe del MOPC da abiertos. Se calcula con los informes de «Estado de las Rutas» del MOPC de 2026 y con
+  la lluvia observada por satélite de IMERG Early (NASA, GPM IMERG Early Precipitation L3 Half Hourly 0.1 degree x
+  0.1 degree V07, GES DISC, doi:10.5067/GPM/IMERG/3B-HH-E/07; datos sin restricción de uso). No usa la lluvia que viene.
+  No es un aviso oficial, y ni la NASA ni el MOPC avalan esta página.
+- Mapa de fondo: (c) colaboradores de OpenStreetMap, en teselas vectoriales de Protomaps (https://protomaps.com), bajo la
+  Open Database License 1.0; es un recorte del Paraguay y sus alrededores, hasta el zoom 13.
+- maplibre-gl.js y maplibre-gl.css: MapLibre GL JS 5.24.0, (c) MapLibre contributors, licencia BSD de 3 cláusulas
+  (https://github.com/maplibre/maplibre-gl-js/blob/v5.24.0/LICENSE.txt).
